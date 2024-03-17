@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+         
+            <form  onsubmit="return validate()" action="/error.html">
+               <fieldset>
+                     <div id="user-container">
+                        <label for="userName">Name</label>
+                        <input type="text" id="userName">
+                        <p id="userName-alert">Cannot be null</p>
+                    </div>
+                    
+                    <div id="password-container">
+                        <label for="password">Password</label>
+                        <input style="margin-bottom: 2rem" type="password" id="password">
+                        
+                        
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password">
+                        <p id="password-alert">Password does not match</p>
+                        <input onclick="showPassword()" type="checkbox" id="show-password">
+                        <label for="show-password">Show Password</label>
+                    </div>
+
+                    <div id="check">
+                      <div id="radios">
+                        <input type="radio" id="male" name="gender">
+                        <label class="checks"  for="male">Male</label>
+
+                        <input type="radio" id="female" name="gender">
+                        <label class="checks"  for="female">Female</label>
+                        <p id="radio-alert">Please select either one</p>
+                      </div>
+
+                    <div id="terms"> 
+                        <input type="checkbox" id="t&c">
+                        <label class="checks"  for="t&c">I accept terms and conditions</label>
+                        <p id="alert">Correct</p>
+                    </div>
+                </div>
+                        
+                    
+                    <button type="submit" id="button" style="width: 50%" onclick="validate()">Submit</button>
+    
+                        
+                </fieldset>
+            </form>
+            <script src="index.js"></script>
+    </body>
+</html>
